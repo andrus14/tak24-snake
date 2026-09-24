@@ -52,11 +52,22 @@ function generateFood() {
 
 }
 
+function drawCanvas () {
+
+  // ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  ctx.font = TILE_SIZE + 'px "Apple Color Emoji", "Segoe UI Emoji", sans-serif';
+
+  // for ( let i = 0; i <= CANVAS_WIDTH; i += TILE_SIZE ) {
+  //   ctx.moveTo(i, 0);
+  //   ctx.lineTo(i, CANVAS_HEIGHT);
+  // }
+
+}
+
 function drawGameBoard() {
 
-  ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  drawCanvas();
 
-  ctx.font = TILE_SIZE + 'px "Apple Color Emoji", "Segoe UI Emoji", sans-serif';
   ctx.fillText(foodEmojis[foodIndex], foodCoordinates.x, foodCoordinates.y);
 
   snakeCoordinates.forEach( el => {
